@@ -4,32 +4,39 @@
     <meta charset="utf-8">
     <title>Draw.io</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
     <script src="fabric.js"></script>
 
     <div class="position-absolute top-0 start-50 translate-middle-x">
       <p class="fs-1">
-        Draw!draw!!draw!!
+        <b>
+          Draw!draw!!draw!!
+        </b>
       </p>
     </div>
 
-    <button id="black" onclick="change_color('black')">Black</button>
-    <button id="grey" onclick="change_color('grey')">Gray</button>
-    <button id="white" onclick="change_color('white')">White</button>
-    <button id="red" onclick="change_color('red')">Red</button>
-    <button id="orange" onclick="change_color('orange')">Orange</button>
-    <button id="blue" onclick="change_color('blue')">Blue</button>
-    <button id="green" onclick="change_color('green')">Green</button>
-    <button id="eraser">ERASER</button>
-    <button id="clear">Clear</button>
-    <button id="download">Download</button>
+    <div id=color_selector class="position-absolute top-0 start-50 translate-middle-x">
+      <button class="btn btn-primary" id="black" onclick="change_color('black')">Black</button>
+      <button class="btn btn-primary" id="grey" onclick="change_color('grey')">Gray</button>
+      <button class="btn btn-primary" id="white" onclick="change_color('white')">White</button>
+      <button class="btn btn-primary" id="red" onclick="change_color('red')">Red</button>
+      <button class="btn btn-primary" id="orange" onclick="change_color('orange')">Orange</button>
+      <button class="btn btn-primary" id="blue" onclick="change_color('blue')">Blue</button>
+      <button class="btn btn-primary" id="green" onclick="change_color('green')">Green</button>
+      <button class="btn btn-primary" id="eraser">ERASER</button>
+      <button class="btn btn-primary" id="clear">Clear</button>
+      <button class="btn btn-primary" id="download">Download</button>
+    </div>
 
-    <canvas id="canvas" width="700" height="500"></canvas>
+    <canvas id="canvas" width="1000" height="500"></canvas>
 
-    <button class="btn btn-primary" onclick="square()" type="button">四角形</button>
+    <div id="bottom_button" class="position-absolute top-0 start-50 translate-middle-x">
+      <button class="btn btn-primary" onclick="square()" type="button">四角形</button>
 
-    <button class="btn btn-primary btn-lg" onclick="reload()" type="button">---更新---</button>
+      <button class="btn btn-primary btn-lg" onclick="reload()" type="button">---更新---</button>
+    </div>
 
     <script>
     color = "green"
